@@ -27,7 +27,7 @@ with engine.begin() as conn:
 
 
 
-data = pd.read_csv("../DATA/data_with_btc_scaled.csv")
+data = pd.read_csv("./DATA/data_with_btc_scaled.csv")
 
 
 def make_data(data):
@@ -54,7 +54,7 @@ def actual(data):
 # ----------------- DataSet Preparation -----------------
 max_encoder_length = 300
 max_prediction_length = 30
-training_cutoff = data["time_idx"].max() - max_prediction_length
+# training_cutoff = data["time_idx"].max() - max_prediction_length
 
 
 def predict(data, max_encoder_length, max_prediction_length):

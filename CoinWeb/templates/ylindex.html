@@ -1,0 +1,17 @@
+{% extends 'basekms.html' %}
+{% block content %}
+    <header>
+        <h1>비트코인 가격 예상</h1>
+        <form action="predict" method="post">
+          <input type="number" name="periods" value="">
+          <input type="submit" value="예측하기">
+      </form>
+    </header>
+{% if path %}
+<img src="{{ url_for('static', filename = 'chart.png') }}" alt="차트" width="500px" height="500">
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+<p>{{ copyright }}</p>
+{% endblock %}

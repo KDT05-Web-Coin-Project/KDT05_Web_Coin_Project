@@ -5,7 +5,7 @@ bp = Blueprint('main_views', __name__, url_prefix='/')
 
 @bp.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 # #문섭님에게 접근 : /kms
 # @bp.route('/kms')

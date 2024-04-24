@@ -22,10 +22,14 @@ def create_app():
     from . import model
 
     # 블루프린트
-    from .views import main_views, ms_main_views, jw_main_views
+    from .views import main_views, ms_main_views, yl_main_views, jw_main_views, winmin_main_views
 
     app.register_blueprint(main_views.bp)
     app.register_blueprint(ms_main_views.ms_bp)
+    app.register_blueprint(yl_main_views.yl_bp)
+    app.register_blueprint(winmin_main_views.bp)
+    app.register_blueprint(jw_main_views.bp)
+
 
     # Flask Server 인스턴스 반환
     return app
